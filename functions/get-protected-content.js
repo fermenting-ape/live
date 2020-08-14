@@ -50,4 +50,10 @@ exports.handler = async (event, context) => {
       }),
     }
   }
+
+  // return content for corresponding role
+  return {
+    statusCode: 200,
+    body: JSON.stringify(content[type]),
+  }
 }
